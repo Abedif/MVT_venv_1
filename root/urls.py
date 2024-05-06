@@ -1,14 +1,13 @@
 
 from django.urls import path , include
 
-from .views import home , contact_us , about_us , comment , help , privacy 
+from .views import home , contact , about_us
 
-
+app_name = 'root'
 
 urlpatterns = [
-    path('' , home) ,
-    path('contact_us/' , contact_us),
-    path('comment/' , comment) ,
-    path('help/' , help) ,
-    path('privacy/' , privacy) ,
+    path('' , home , name='home') ,
+    path('contact/' , contact , name='contact'),
+    path('about_us/' , about_us , name = 'about_us')
+    
 ]
